@@ -1,12 +1,14 @@
 Pod::Spec.new do |s|
   s.name             = "SCLPlayer"
-  s.version          = "0.2.2"
+  s.version          = "0.2.3"
   s.summary          = "A SoundCloud player for iOS apps. Uses UIWebView to display their HTML5 widget."
-  s.homepage         = "https://github.com/eric-robinson/SCLPlayer"
+  s.homepage         = "https://github.com/appmajik/SCLPlayer.git"
   s.license          = 'MIT'
-  s.author           = { "Eric Robinson" => "eric.robinson@me.com" }
-  s.source           = { :git => "https://github.com/eric-robinson/SCLPlayer.git", :tag => s.version.to_s }
-  s.social_media_url = 'https://twitter.com/eric_robinson'
+  s.author           = { 
+                          "Eric Robinson" => "eric.robinson@me.com",
+                          "Daniel McConville:" => "dan@appmajik.com"
+                       }
+  s.source           = { :git => "https://github.com/appmajik/SCLPlayer.git", :tag => s.version.to_s }
   s.platform	     = :ios, '7.0'
   s.requires_arc	 = true
   s.source_files 	 = 'Pod/Classes'

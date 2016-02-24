@@ -32,6 +32,8 @@ NSString* const SCLPlayerPropertySharing = @"sharing";
 NSString* const SCLPlayerPropertyLiking = @"liking";
 NSString* const SCLPlayerPropertyDownload = @"download";
 NSString* const SCLPlayerPropertyBuying = @"buying";
+NSString* const SCLPlayerPropertyAutoPlay = @"auto_play";
+NSString* const SCLPlayerPropertyShowPlayCount = @"show_playcount";
 
 @interface SCLPlayerViewController () <UIWebViewDelegate>
 
@@ -94,10 +96,13 @@ NSString* const SCLPlayerPropertyBuying = @"buying";
         }];
         
         self.pendingResponseHandlers = [NSMutableDictionary dictionary];
-        
+
         [self.pendingResponseHandlers addEntriesFromDictionary:@{
-            @"getSounds" : [NSMutableArray array],
-            @"getCurrentSound" : [NSMutableArray array]
+          @"getSounds" : [NSMutableArray array],
+          @"getCurrentSound" : [NSMutableArray array],
+          @"getDuration" : [NSMutableArray array],
+          @"getVolume" : [NSMutableArray array],
+          @"getPosition" : [NSMutableArray array]
         }];
     }
     
@@ -477,7 +482,9 @@ NSString* const SCLPlayerPropertyBuying = @"buying";
              SCLPlayerPropertySharing,
              SCLPlayerPropertyLiking,
              SCLPlayerPropertyDownload,
-             SCLPlayerPropertyBuying];
+             SCLPlayerPropertyBuying,
+             SCLPlayerPropertyShowPlayCount,
+             SCLPlayerPropertyAutoPlay];
 }
 
 @end
